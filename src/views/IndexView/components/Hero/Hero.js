@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
@@ -13,15 +12,12 @@ const Hero = () => {
       if (!jarallaxElems || (jarallaxElems && jarallaxElems.length === 0)) {
         return;
       }
-
       const { jarallax } = await import('jarallax');
       jarallax(jarallaxElems, { speed: 0.2 });
     };
 
     jarallaxInit();
   });
-
-  const theme = useTheme();
 
   return (
     <Box
@@ -51,9 +47,8 @@ const Hero = () => {
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
-          backgroundImage:
-            `url(${HeroImg})`,
-          filter: theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'brightness(0.7)',
+          backgroundImage: `url(${HeroImg})`,
+          filter: 'brightness(0.7)',
         }}
       />
       <Container position={'relative'} zIndex={2}>
