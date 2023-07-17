@@ -34,7 +34,7 @@ const Contact = () => {
               sx={{
                 fontWeight: 700
               }}
-            >Book With Hilary Molloy Today
+            >Book Your Appointment Today
             </Typography>
           </Box>
           <Box>
@@ -56,7 +56,7 @@ const Contact = () => {
             style={{
               minHeight: 300,
               borderRadius: 8,
-              filter: theme.palette.mode === 'dark' ? 'grayscale(0.5) opacity(0.7)' : 'none'
+              filter: theme.palette.mode === 'light' ? 'grayscale(0.6) opacity(1)' : 'none'
             }}
           />
         </Box>
