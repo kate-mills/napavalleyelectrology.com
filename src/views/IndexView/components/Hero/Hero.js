@@ -53,7 +53,7 @@ const Hero = () => {
           backgroundPosition: 'center center',
           backgroundImage:
             `url(${HeroImg})`,
-          filter: theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
+          filter: theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'brightness(0.7)',
         }}
       />
       <Container position={'relative'} zIndex={2}>
