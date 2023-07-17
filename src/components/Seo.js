@@ -5,7 +5,7 @@ const Seo = ({location, params, data, pageContext = {}}) => {
   const defaultTitle = 'Napa Valley Electrology & Skin Care'
   const defaultDescription =
     'Permanent hair removal via electrolysis and clinical skin care treatments. Gender Affirming and surgery prep services provided with compassion and understanding.'
-  const defaultImage = `${siteUrl}/napavalleyelectrology-ladies.jpg`
+  const defaultImage = `${siteUrl}/product.jpg`
   console.log(defaultImage)
   return (
     <>
