@@ -1,11 +1,12 @@
 import React from 'react'
 const Seo = ({location, params, data, pageContext = {}}) => {
   const {title, description, image} = pageContext
-  const siteUrl = `https://katemillscompany.com`
-  const defaultTitle = 'Kate Mills Company'
+  const siteUrl = `https://napavalleyelectrology.com`
+  const defaultTitle = 'Napa Valley Electrology & Skin Care'
   const defaultDescription =
-    'Kate Mills Portfolio, featuring fast, secure, and robust websites I built using React, Gatsby, GraphQL, NodeJS, and more.'
-  const defaultImage = `${siteUrl}w-image.jpg`
+    'Permanent hair removal via electrolysis and clinical skin care treatments. Gender Affirming and surgery prep services provided with compassion and understanding.'
+  const defaultImage = `${siteUrl}/napa-valley-electrology.jpg`
+  console.log(defaultImage)
   return (
     <>
       <title>{title || defaultTitle}</title>
