@@ -64,7 +64,7 @@ const Contact = () => {
             <Typography variant={'body1'} gutterBottom sx={{fontWeight: 'medium'}}>
               Phone:
             </Typography>
-            <Typography variant={'subtitle1'}>+1 (707) 315-3329</Typography>
+            <Typography variant={'subtitle1'} sx={{color: 'text.secondary !important', textDecoration: 'none'}}>+1 (707) 315-3329</Typography>
           </Grid>
           <Grid item xs={12} sm={6}>
             <Typography variant={'body1'} gutterBottom sx={{fontWeight: 'medium'}}>
