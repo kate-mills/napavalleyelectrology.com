@@ -12,10 +12,8 @@ const IndexView = () => (
     </Box>
     <Box bgcolor={'primary.main'}>
     </Box>
-    <Container>
-      <Gallery />
-    </Container>
     <Container> <Contact /> </Container>
+    <Container> <Gallery /> </Container>
   </Main>
 );
 
