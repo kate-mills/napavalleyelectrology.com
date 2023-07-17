@@ -61,7 +61,7 @@ const Gallery = () => {
               height={'100%'}
               width={'100%'}
               src={item.src}
-              alt="..."
+              alt=""
               loading="lazy"
               style={{
                 objectFit: 'cover',

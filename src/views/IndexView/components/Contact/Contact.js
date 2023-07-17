@@ -4,6 +4,7 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 import {alpha, useTheme} from '@mui/material/styles'
+import Link from '@mui/material/Link';
 
 const Contact = () => {
   const theme = useTheme()
@@ -33,11 +34,11 @@ const Contact = () => {
               sx={{
                 fontWeight: 700
               }}
-            >Book Your Appointment Today
+            >Book With Hilary Molloy Today
             </Typography>
           </Box>
           <Box>
-            <Typography variant="h6" color={'text.secondary'}>Napa Valley Electrology & Skin Care is located inside Paradigm Medical Aesthetics
+            <Typography variant="h6" color={'text.secondary'}>Napa Valley Electrology & Skin Care is in Paradigm Medical Aesthetics.
             </Typography>
           </Box>
         </Box>
@@ -64,7 +65,7 @@ const Contact = () => {
             <Typography variant={'body1'} gutterBottom sx={{fontWeight: 'medium'}}>
               Phone:
             </Typography>
-            <Typography variant={'subtitle1'} sx={{color: 'text.secondary !important', textDecoration: 'none'}}>+1 (707) 315-3329</Typography>
+             <Link href="tel:+17073153329" color="inherit">(707) 315-3329</Link>
           </Grid>
           <Grid item xs={12} sm={6}>
             <Typography variant={'body1'} gutterBottom sx={{fontWeight: 'medium'}}>
