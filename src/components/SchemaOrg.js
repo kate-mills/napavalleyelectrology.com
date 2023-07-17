@@ -17,7 +17,8 @@ export default React.memo(({description, title, image}) => {
         `https://instagram.com/napavalleyelectrology`,
         `https://www.yelp.com/biz/napa-valley-electrology-and-skin-care-napa`
       ],
-      telephone: '707-315-3329',
+      telephone: '+17073153329',
+      priceRange: "$$",
       url: 'https://napavalleyelectrology.com',
       address: {
         '@type': 'PostalAddress',

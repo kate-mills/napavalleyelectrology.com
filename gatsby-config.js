@@ -14,6 +14,7 @@ module.exports = {
       options: {
         name: `Napa Valley Electrology & Skin Care`,
         short_name: `Napa Valley Electrology`,
+        description: `An integrated approach to skin health. Permanent hair removal via electrolysis + clinical skin care treatments. Gender Affirming and surgery prep services provided with compassion and understanding.`,
         lang: `en`,
         start_url: `/`,
         icon: `src/images/icon.png`,
@@ -24,7 +25,6 @@ module.exports = {
       }
     }
   ],
-
 
   siteMetadata: {
     title: `Napa Valley Electrology & Skin Care`,
@@ -43,7 +43,7 @@ module.exports = {
         city: `Napa`,
         state: `CA`,
         zip: `94559`,
-        country: `USA`,
+        country: `USA`
       },
       email: `hilary@napavalleyelectrology.com`,
       name: `Napa Valley Electrology & Skin Care`,
@@ -54,9 +54,8 @@ module.exports = {
       sameAs: [
         `https://www.facebook.com/skincarebyhilary`,
         `https://instagram.com/napavalleyelectrology`,
-        `https://www.yelp.com/biz/napa-valley-electrology-and-skin-care-napa`,
-      ],
-    },
-  },
-
+        `https://www.yelp.com/biz/napa-valley-electrology-and-skin-care-napa`
+      ]
+    }
+  }
 }
