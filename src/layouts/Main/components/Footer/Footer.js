@@ -4,7 +4,6 @@ import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import Link from 'components/Link'
-import Logo from 'images/Logo.svg'
 
 const Footer = () => {
   return (
@@ -17,9 +16,7 @@ const Footer = () => {
           width={1}
           flexDirection={{xs: 'column', sm: 'row'}}
         >
-          <Box display={'flex'} component={Link} to="/" title="Napa Valley Electrology & Skin Care" width={80}>
-            <Box component={'img'} src={Logo} height={25} />
-          </Box>
+          <Box display={'flex'} width={80}></Box>
           <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
             <Box marginTop={1}>
               <Button variant="outlined" color="primary" component={'a'} href="tel:+7073153329" size="small">(707) 315-3329</Button>
