@@ -43,7 +43,7 @@ const Main = ({children, colorInvert = false, bgcolor = 'transparent'}) => {
         elevation={trigger ? 1 : 0}
       >
         <Container paddingY={1}>
-          <Topbar color={trigger ? 'text.secondary': 'common.white'}/>
+          <Topbar color={trigger ? 'text.secondary': 'text.primary'}/>
         </Container>
       </AppBar>
       <main>

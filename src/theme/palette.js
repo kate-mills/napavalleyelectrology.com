@@ -1,21 +1,25 @@
 export const light = {
   alternate: {
-    main: '#f7faff',
-    dark: '#edf1f7'
+    main: '#f1f6f5',
+    dark: '#e7efed'
   },
-  cardShadow: 'rgba(23, 70, 161, .11)',
+  cardShadow: 'rgba(93, 119, 114,.11)',
   mode: 'light',
   primary: {
-    main: '#6E7349',
+    main: '#5d7772',
+    light: '#9fccc3',
+    dark: '#152D2E',
     contrastText: '#fff'
   },
   secondary: {
-    main: '#D9C2AD',
-    contrastText: '#000'
+    light: '#c6af97',
+    main: '#7e613a',
+    dark: '#482e18',
+    contrastText: 'rgba(225, 225, 225, 0.87)'
   },
   text: {
     primary: '#1e2022',
-    secondary: '#736965'
+    secondary: '#677788'
   },
   divider: 'rgba(0, 0, 0, 0.12)',
   background: {
@@ -38,16 +42,16 @@ export const dark = {
   },
   mode: 'dark',
   primary: {
-    light: '#88c4c7',
-    main: '#6bb6ba',
-    dark: '#168187',
-    contrastText: '#000000'
+    main: '#1976d2',
+    light: '#2196f3',
+    dark: '#0d47a1',
+    contrastText: '#fff'
   },
   secondary: {
-    light: '#adba39',
-    main: '#99A908',
-    dark: '#6b7605',
-    contrastText: '#000000'
+    light: '#FFEA41',
+    main: '#FFE102',
+    dark: '#DBBE01',
+    contrastText: 'rgba(0, 0, 0, 0.87)'
   },
   text: {
     primary: '#EEEEEF',
