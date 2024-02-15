@@ -1312,11 +1312,6 @@
   resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-5.0.5.tgz#bd3e923660cc4632d09b1882d104b0cb9430dec6"
   integrity sha512-RE1JmWRB6Kxo+1nXUnORSSH5uKgUZ2QEQE+h/nsNt758C+17G9y26E9QiAsIqsG13NpKhwn22EeECfyC+da5ew==
 
-"@fontsource/shadows-into-light-two@^5.0.5":
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/@fontsource/shadows-into-light-two/-/shadows-into-light-two-5.0.5.tgz#2a05c093b1fd9c29811ff6e4d66a8ca266bcc041"
-  integrity sha512-8hYpTEBMnIM4GkTnY52PF6fU8CONd1n+AzJPCjC5ZBtqpcNodc8LQksQr9JaF0ucnxpHOCNWUdOIIeLmcB8aQw==
-
 "@gatsbyjs/parcel-namer-relative-to-cwd@^1.10.0":
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/@gatsbyjs/parcel-namer-relative-to-cwd/-/parcel-namer-relative-to-cwd-1.10.0.tgz#4768957e2bd343ade1c8dfeb27bff2849ab46564"
@@ -3568,9 +3563,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001464, caniuse-lite@^1.0.30001503:
-  version "1.0.30001516"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001516.tgz#621b1be7d85a8843ee7d210fd9d87b52e3daab3a"
-  integrity sha512-Wmec9pCBY8CWbmI4HsjBeQLqDTqV91nFVR83DnZpYyRnPI1wePDsTg0bGLPC5VU/3OIZV1fmxEea1b+tFKe86g==
+  version "1.0.30001587"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001587.tgz"
+  integrity sha512-HMFNotUmLXn71BQxg8cijvqxnIAofforZOwGsxyXJ0qugTdspUF4sPSJ2vhgprHCB996tIDzEq1ubumPDV8ULA==
 
 capital-case@^1.0.4:
   version "1.0.4"
