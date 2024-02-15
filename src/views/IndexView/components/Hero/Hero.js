@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 
-import HeroImg from 'images/product.jpg'
+import HeroImg from 'images/electrolysis.webp'
 import Container from 'components/Container'
 
 const Hero = () => {
@@ -44,7 +44,7 @@ const Hero = () => {
           zIndex: -1,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
-          backgroundPosition: 'center center',
+          backgroundPosition: 'center bottom',
           backgroundImage: `url(${HeroImg})`,
           filter: 'brightness(0.7)'
         }}
@@ -60,7 +60,7 @@ const Hero = () => {
               color: 'common.white',
               textTransform: 'uppercase'
             }}
-          >Electrology & Skin Care
+          >Electrology + Skin Care
           </Typography>
           <Typography variant="h5" component="h2" sx={{color: 'common.white'}}>
             Permanent hair removal via electrolysis + clinical skin care treatments. Gender Affirming and surgery prep

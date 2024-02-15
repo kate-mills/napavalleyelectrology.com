@@ -17,9 +17,8 @@ const Footer = () => {
         >
           <Box display={'flex'} width={80}></Box>
           <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
-            <Box marginTop={1}>
-              <Button variant="outlined" color="primary" component={'a'} href="tel:+7073153329" size="small">(707) 315-3329</Button>
-            </Box>
+            <Box marginTop={1}> <Button variant="outlined" color="primary" component={'a'} href="tel:+7073153329" size="small">(707) 315-3329</Button> </Box>
+            <Box marginTop={1} marginLeft={1}> <Button variant="contained" color="primary" component={'a'} href="/faq" size="small">FAQs</Button> </Box>
           </Box>
         </Box>
       </Grid>
