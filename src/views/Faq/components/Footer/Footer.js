@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Link from 'components/Link'
-import icon from 'images/Electrolysis-Aftercare.pdf'
+import icon from 'images/electrolysis-instructions.pdf'
 
 const Footer = () => {
   const theme = useTheme();
