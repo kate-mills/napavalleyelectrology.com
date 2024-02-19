@@ -139,6 +139,7 @@ const Content = () => {
                 'Avoid picking or scratching the treated area.',
                 'Avoid direct sun exposure and wear SPF.',
                 'Avoid strenuous activities.',
+                'Apply ice packs periodically to the treated area for 24-48 hours post-treatment to help reduce any swelling that might occur.',
               ]
             }
           ]}
@@ -153,12 +154,12 @@ const Content = () => {
               title: 'Is electrolysis only for women?',
               answerContainsList: false,
               subtitle:
-                'This is not true.  We provide gender affirming and surgery prep services with compassion and understanding. Electrolysis is a safe and effective hair removal method for both men and women. Additionally, some people believe that electrolysis is only suitable for removing facial hair, but it can be used on any part of the body.'
+                'This is not true.  We provide gender affirming and surgery prep services with compassion and understanding. Electrolysis is a safe and effective hair removal method for all genders. Additionally, some people believe that electrolysis is only suitable for removing facial hair, but it can be used on any part of the body.'
             },
             {
               title: 'Is electrolysis painful?',
               answerContainsList: false,
-              subtitle: 'The level of discomfort varies from person to person, but many people report a slight stinging or pricking sensation during the procedure.'
+              subtitle: 'The level of discomfort varies from person to person, but many people report a slight heat or pricking sensation during the procedure.'
             },
           ]}
         />
