@@ -8,12 +8,10 @@ const encode = (data) => {
 
 const handleSubmitForm = async (values={}, actions={}) => {
   const {setSubmitting, resetForm} = actions
-
-
   fetch('/', {
     method: 'POST',
     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-    body: encode({'form-name': 'contact-form-conditional', ...values})
+    body: encode({'form-name': 'health-form', ...values})
   }).then(() => {
       setSubmitting(false)
       resetForm()

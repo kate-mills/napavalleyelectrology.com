@@ -74,29 +74,29 @@ const HealthForm = () => {
 
         {formState && (
           <Box mt={3}>
-          <Typography variant="body1" gutterBottom  textAlign="center" color="text.secondary">
+            <Typography variant="body1" gutterBottom textAlign="center" color="text.secondary">
               {"If you'd like to schedule, "}
-            <Box
-              component={'a'} href={`sms://+14159881102`} color="text.secondary">send me a SMS message</Box>
-            {'.'}
+              <Box component={'a'} href={`sms://+14159881102`} color="text.secondary">
+                send me a SMS message
+              </Box>
+              {'.'}
             </Typography>
           </Box>
         )}
       </Box>
 
       <Box>
-        {!formState && (
-          <form
-            onSubmit={(event) => {
-              event.preventDefault()
-              formik.handleSubmit()
-            }}
-            id="health-form"
-            name="health-form"
-            data-netlify={'true'}
-            method="POST"
-          >
-            <input type="hidden" name="form-name" value="health-form" />
+        <form
+          onSubmit={(event) => {
+            event.preventDefault()
+            formik.handleSubmit()
+          }}
+          id="health-form"
+          name="health-form"
+          data-netlify={'true'}
+          method="POST"
+        >
+          <input type="hidden" name="form-name" value="health-form" />
             <Grid container spacing={4}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -221,8 +221,7 @@ const HealthForm = () => {
                 </Box>
               </Grid>
             </Grid>
-          </form>
-        )}
+        </form>
       </Box>
     </Box>
   )
