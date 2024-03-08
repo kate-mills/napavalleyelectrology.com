@@ -1,18 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Link from 'components/Link'
+import React from 'react'
+import {useTheme} from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
+import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
+import Button from '@mui/material/Button'
 import icon from 'images/electrolysis-instructions.pdf'
 
 const Footer = () => {
-  const theme = useTheme();
+  const theme = useTheme()
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
-    defaultMatches: true,
-  });
+    defaultMatches: true
+  })
 
   return (
     <Box>
@@ -21,7 +20,7 @@ const Footer = () => {
           variant="h4"
           align={'center'}
           sx={{
-            fontWeight: 'medium',
+            fontWeight: 'medium'
           }}
         >
           Didn't find what you are looking for?
@@ -29,9 +28,9 @@ const Footer = () => {
       </Box>
       <Box
         display="flex"
-        flexDirection={{ xs: 'column', sm: 'row' }}
+        flexDirection={{xs: 'column', sm: 'row'}}
         justifyContent={'center'}
-        alignItems={{ xs: 'stretched', sm: 'center' }}
+        alignItems={{xs: 'stretched', sm: 'center'}}
       >
         <Box
           component={Button}
@@ -56,7 +55,10 @@ const Footer = () => {
               />
             </svg>
           }
-        > <Link color="white" href={icon} download>Download the guide</Link>
+        >
+          <Box component="a" color="white" href={icon} download>
+            Download the guide
+          </Box>
         </Box>
         <Box
           component={Button}
@@ -64,14 +66,16 @@ const Footer = () => {
           color="primary"
           size="large"
           fullWidth={!isMd}
-          marginTop={{ xs: 1, sm: 0 }}
-          marginLeft={{ sm: 2 }}
-        ><Link href="mailto:hilary@napavalleyelectrology.com">Email Hilary</Link>
-
+          marginTop={{xs: 1, sm: 0}}
+          marginLeft={{sm: 2}}
+        >
+          <Box component="a" sx={{color: 'text.primary'}} href="mailto:hilary@napavalleyelectrology.com">
+            Email Hilary
+          </Box>
         </Box>
       </Box>
     </Box>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
