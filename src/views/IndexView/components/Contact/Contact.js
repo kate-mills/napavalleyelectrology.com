@@ -4,7 +4,6 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 import {alpha, useTheme} from '@mui/material/styles'
-import Link from '@mui/material/Link';
 
 const Contact = () => {
   const theme = useTheme()
@@ -65,7 +64,7 @@ const Contact = () => {
             <Typography variant={'body1'} gutterBottom sx={{fontWeight: 'medium'}}>
               Phone:
             </Typography>
-             <Link href="tel:+17073153329" color="inherit">(707) 315-3329</Link>
+             <Box component="a" href="tel:+17073153329" color="inherit">(707) 315-3329</Box>
           </Grid>
           <Grid item xs={12} sm={6}>
             <Typography variant={'body1'} gutterBottom sx={{fontWeight: 'medium'}}>
