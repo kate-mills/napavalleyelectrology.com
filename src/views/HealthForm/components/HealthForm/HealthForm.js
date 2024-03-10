@@ -175,7 +175,7 @@ const HealthForm = () => {
                 </Button>
               </Grid>
               <Grid item container justifyContent={'center'} xs={12}>
-                <Typography color="text.secondary">{formState}</Typography>
+                <Typography color="text.secondary"></Typography>
               </Grid>
               <Grid item xs={12}>
                 <Divider />
