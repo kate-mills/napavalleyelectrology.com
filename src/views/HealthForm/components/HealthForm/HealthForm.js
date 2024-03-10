@@ -52,7 +52,7 @@ const validationSchema = yup.object({
     .required('Zip code is required.'),
   referredBy: yup.string().trim().min(2, 'Please enter a valid name.').max(50, 'Please enter a valid name.'),
   skinConcerns: yup.string().trim().max(400, 'Please limit your message to 400 characters.'),
-  hadPastElectro: yup.string().oneOf([...yesNoOptions])
+  hadPastElectro: yup.string().oneOf([...yesNoOptions]).required(`Please select 'yes' or 'no'.`)
 })
 
 const HealthForm = () => {
@@ -70,7 +70,7 @@ const HealthForm = () => {
     zip: '',
     referredBy: '',
     skinConcerns: '',
-    hadPastElectro: 'No'
+    hadPastElectro: ''
   }
 
   const formik = useFormik({
@@ -121,6 +121,7 @@ const HealthForm = () => {
           name="health-form"
           data-netlify={'true'}
           method="POST"
+          autoComplete="on"
         >
           <input type="hidden" name="form-name" value="health-form" />
 
@@ -261,7 +262,6 @@ const HealthForm = () => {
                 helperText={formik.touched.zip && formik.errors.zip}
               />
             </Grid>
-
             <Grid item xs={12}>
               <TextField
                 sx={{height: 54}}
@@ -280,7 +280,6 @@ const HealthForm = () => {
                 helperText={formik.touched.referredBy && formik.errors.referredBy}
               />
             </Grid>
-
             <Grid item xs={12}>
               <Divider />
             </Grid>
@@ -307,9 +306,9 @@ const HealthForm = () => {
                 helperText={formik.touched.skinConcerns && formik.errors.skinConcerns}
               />
             </Grid>
-
             <Grid item xs={12}>
               <TextField
+                InputLabelProps={{shrink: true}}
                 select
                 id="hadPastElectro"
                 sx={{height: 54}}
