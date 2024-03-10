@@ -358,7 +358,7 @@ export default HealthForm
 
 const SuccessBlock = ({msg=""}) => {
   return (
-    <Grid xs={12}>
+    <Grid item xs={12}>
       <Typography variant={'h5'} sx={{fontWeight: 700}} align={'center'} mt={2} gutterBottom>
         Thank you!
       </Typography>
