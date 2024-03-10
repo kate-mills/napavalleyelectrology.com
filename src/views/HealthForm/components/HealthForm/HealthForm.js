@@ -71,7 +71,6 @@ const HealthForm = () => {
         <Typography color="text.secondary" align={formState ? 'left' : 'center'}>
           {formState || 'Please answer the following questions to the best of your knowledge & ability.'}
         </Typography>
-
         {formState && (
           <Box mt={3}>
             <Typography variant="body1" gutterBottom textAlign="center" color="text.secondary">
@@ -84,19 +83,19 @@ const HealthForm = () => {
           </Box>
         )}
       </Box>
-
-      <Box>
-        <form
-          onSubmit={(event) => {
-            event.preventDefault()
-            formik.handleSubmit()
-          }}
-          id="health-form"
-          name="health-form"
-          data-netlify={'true'}
-          method="POST"
-        >
-          <input type="hidden" name="form-name" value="health-form" />
+      {!formState && (
+        <Box>
+          <form
+            onSubmit={(event) => {
+              event.preventDefault()
+              formik.handleSubmit()
+            }}
+            id="health-form"
+            name="health-form"
+            data-netlify={'true'}
+            method="POST"
+          >
+            <input type="hidden" name="form-name" value="health-form" />
             <Grid container spacing={4}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -221,8 +220,9 @@ const HealthForm = () => {
                 </Box>
               </Grid>
             </Grid>
-        </form>
-      </Box>
+          </form>
+        </Box>
+      )}
     </Box>
   )
 }
