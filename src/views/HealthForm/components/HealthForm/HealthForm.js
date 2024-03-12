@@ -85,7 +85,7 @@ const HealthForm = () => {
     zip: '',
     referredBy: '',
     skinConcerns: '',
-    hadPastElectro: 'No',
+    hadPastElectro: '',
     tempMethodUsed: []
   }
 
