@@ -130,7 +130,7 @@ const HealthForm = () => {
         </Typography>
       </Box>
       <Box>
-    <form
+        <form
           onSubmit={(event) => {
             event.preventDefault()
             formik.handleSubmit()
@@ -147,7 +147,7 @@ const HealthForm = () => {
           <Grid container spacing={4}>
             <Grid item xs={12}>
               <TextField
-                label="Full name"
+                label="Full name *"
                 InputLabelProps={{shrink: true}}
                 variant="outlined"
                 color="primary"
@@ -162,15 +162,33 @@ const HealthForm = () => {
                 sx={{
                   height: 54,
                   backgroundColor: 'white !important',
-                  '& input:-internal-autofill-selected': {backgroundColor: 'white !important'}
                 }}
                 autoComplete="name"
               />
             </Grid>
+            <Grid item xs={12}>
+              <TextField
+                sx={{height: 54}}
+                InputLabelProps={{shrink: true}}
+                label="Referred By"
+                variant="outlined"
+                color="primary"
+                size="medium"
+                name="referredBy"
+                id="referredBy"
+                fullWidth
+                value={formik.values.referredBy}
+                onBlur={formik.handleBlur}
+                onChange={formik.handleChange}
+                error={formik.touched.referredBy && Boolean(formik.errors.referredBy)}
+                helperText={formik.touched.referredBy && formik.errors.referredBy}
+              />
+            </Grid>
+
             <Grid item xs={12} sm={6}>
               <TextField
                 sx={{height: 54}}
-                label="Phone Number"
+                label="Phone Number *"
                 InputLabelProps={{shrink: true}}
                 fullWidth
                 variant="outlined"
@@ -191,7 +209,7 @@ const HealthForm = () => {
                 id="email"
                 name="email"
                 InputLabelProps={{shrink: true}}
-                label="Email"
+                label="Email *"
                 type="email"
                 value={formik.values.email}
                 onChange={formik.handleChange}
@@ -208,7 +226,7 @@ const HealthForm = () => {
             <Grid item xs={12}>
               <TextField
                 sx={{height: 54}}
-                label="Address"
+                label="Address *"
                 InputLabelProps={{shrink: true}}
                 variant="outlined"
                 color="primary"
@@ -226,7 +244,7 @@ const HealthForm = () => {
             <Grid item xs={12} sm={4}>
               <TextField
                 sx={{height: 54}}
-                label="City"
+                label="City *"
                 InputLabelProps={{shrink: true}}
                 variant="outlined"
                 color="primary"
@@ -246,7 +264,7 @@ const HealthForm = () => {
               <TextField
                 sx={{height: 54}}
                 InputLabelProps={{shrink: true}}
-                label="State"
+                label="State *"
                 variant="outlined"
                 color="primary"
                 size="medium"
@@ -264,7 +282,7 @@ const HealthForm = () => {
               <TextField
                 sx={{height: 54}}
                 InputLabelProps={{shrink: true}}
-                label="Zip"
+                label="Zip *"
                 variant="outlined"
                 color="primary"
                 size="medium"
@@ -276,24 +294,6 @@ const HealthForm = () => {
                 onChange={formik.handleChange}
                 error={formik.touched.zip && Boolean(formik.errors.zip)}
                 helperText={formik.touched.zip && formik.errors.zip}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                sx={{height: 54}}
-                InputLabelProps={{shrink: true}}
-                label="Referred By"
-                variant="outlined"
-                color="primary"
-                size="medium"
-                name="referredBy"
-                id="referredBy"
-                fullWidth
-                value={formik.values.referredBy}
-                onBlur={formik.handleBlur}
-                onChange={formik.handleChange}
-                error={formik.touched.referredBy && Boolean(formik.errors.referredBy)}
-                helperText={formik.touched.referredBy && formik.errors.referredBy}
               />
             </Grid>
             {/*<Grid item xs={12}> <Divider /> </Grid>*/}
@@ -318,9 +318,8 @@ const HealthForm = () => {
             </Grid>
             <Grid item xs={12}>
               <Radios
-                fullWidth
                 name="hadPastElectro"
-                label="Have you undergone electrolysis treatments?"
+                label="Have you undergone electrolysis treatments? *"
                 radioOptions={yesNoOptions}
                 value={formik.values.hadPastElectro}
                 onChange={formik.handleChange}
