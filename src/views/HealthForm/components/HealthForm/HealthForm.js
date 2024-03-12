@@ -164,6 +164,7 @@ const HealthForm = () => {
                   backgroundColor: 'white !important',
                   '& input:-internal-autofill-selected': {backgroundColor: 'white !important'}
                 }}
+                autoComplete="name"
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -182,7 +183,7 @@ const HealthForm = () => {
                 onBlur={formik.handleBlur}
                 error={formik.touched.phoneNumber && Boolean(formik.errors.phoneNumber)}
                 helperText={formik.touched.phoneNumber && formik.errors.phoneNumber}
-                
+                autoComplete="phone"
               />
             </Grid>
             <Grid item xs={12} sm={6}>
