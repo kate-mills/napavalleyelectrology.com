@@ -4,17 +4,28 @@ import {useFormik} from 'formik'
 import * as yup from 'yup'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import Divider from '@mui/material/Divider'
 import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
 import MenuItem from '@mui/material/MenuItem'
 import Button from '@mui/material/Button'
-//import Link from 'components/Link'
-//import {useTheme} from '@mui/material/styles'
+import MultipleSelect from './MultipleSelect'
 
 import {handleSubmitForm} from 'utils/form-helper'
 
 const yesNoOptions = ['Yes', 'No']
+const tempMethods = [
+  'Wax',
+  'Shaving',
+  'Electric Epilator',
+  'Bleaching',
+  'Scissors',
+  'Threading',
+  'Sugar',
+  'Depilatory cream',
+  'Home light-based epilator',
+  'Sanding',
+  'Tweezers'
+]
 const phoneRegExp = /[0-9]{3}-?[0-9]{3}-?[0-9]{4}/
 
 const validationSchema = yup.object({
@@ -52,7 +63,11 @@ const validationSchema = yup.object({
     .required('Zip code is required.'),
   referredBy: yup.string().trim().min(2, 'Please enter a valid name.').max(50, 'Please enter a valid name.'),
   skinConcerns: yup.string().trim().max(400, 'Please limit your message to 400 characters.'),
-  hadPastElectro: yup.string().oneOf([...yesNoOptions]).required(`Please select 'yes' or 'no'.`)
+  hadPastElectro: yup
+    .string()
+    .oneOf([...yesNoOptions])
+    .required(`Please select 'yes' or 'no'.`),
+  tempMethodUsed: yup.array().of(yup.string())
 })
 
 const HealthForm = () => {
@@ -70,7 +85,8 @@ const HealthForm = () => {
     zip: '',
     referredBy: '',
     skinConcerns: '',
-    hadPastElectro: ''
+    hadPastElectro: '',
+    tempMethodUsed: []
   }
 
   const formik = useFormik({
@@ -88,6 +104,7 @@ const HealthForm = () => {
         setFormState(
           `Thank you for taking the time to provide me with your health information. I value your input and look forward to treating you in my office soon.`
         )
+        console.log(values)
       }
     }
   })
@@ -99,6 +116,7 @@ const HealthForm = () => {
     !formik.values.city ||
     !formik.values.state ||
     !formik.values.zip ||
+    !formik.values.hadPastElectro ||
     formState
 
   return (
@@ -125,11 +143,7 @@ const HealthForm = () => {
         >
           <input type="hidden" name="form-name" value="health-form" />
 
-          <Grid item xs={12} sm={6}>
-            <Typography variant={'subtitle1'} sx={{marginBottom: 2}} fontWeight={700}>
-              General Information
-            </Typography>
-          </Grid>
+          {/*<Grid item xs={12} sm={6}> <Typography variant={'subtitle1'} sx={{marginBottom: 2}} fontWeight={700}> General Information </Typography> </Grid>*/}
           <Grid container spacing={4}>
             <Grid item xs={12}>
               <TextField
@@ -280,14 +294,8 @@ const HealthForm = () => {
                 helperText={formik.touched.referredBy && formik.errors.referredBy}
               />
             </Grid>
-            <Grid item xs={12}>
-              <Divider />
-            </Grid>
-            <Grid item xs={12}>
-              <Typography variant={'subtitle1'} marginBottom={-1} fontWeight={700}>
-                General Hygiene
-              </Typography>
-            </Grid>
+            {/*<Grid item xs={12}> <Divider /> </Grid>*/}
+            {/*<Grid item xs={12}><Typography variant={'subtitle1'} marginBottom={-1} fontWeight={700}>General Hygiene</Typography></Grid>*/}
             <Grid item xs={12}>
               <TextField
                 InputLabelProps={{shrink: true}}
@@ -332,6 +340,20 @@ const HealthForm = () => {
               </TextField>
             </Grid>
 
+            <Grid item xs={12}>
+              <MultipleSelect
+                label="What temporary hair removal methods have you used?"
+                name="tempMethodUsed"
+                value={formik.values.tempMethodUsed}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                error={formik.touched.tempMethodUsed && Boolean(formik.errors.tempMethodUsed)}
+                fullWidth
+                list={tempMethods}
+                stateValue={formik.values.tempMethodUsed}
+              />
+            </Grid>
+
             <Grid item container justifyContent={'center'} xs={12}>
               {!formState ? (
                 <Button
@@ -344,8 +366,9 @@ const HealthForm = () => {
                 >
                   Submit
                 </Button>
-              ):<SuccessBlock  msg={formState} />
-              }
+              ) : (
+                <SuccessBlock msg={formState} />
+              )}
             </Grid>
           </Grid>
         </form>
@@ -356,7 +379,7 @@ const HealthForm = () => {
 
 export default HealthForm
 
-const SuccessBlock = ({msg=""}) => {
+const SuccessBlock = ({msg = ''}) => {
   return (
     <Grid item xs={12}>
       <Typography variant={'h5'} sx={{fontWeight: 700}} align={'center'} mt={2} gutterBottom>
@@ -365,11 +388,11 @@ const SuccessBlock = ({msg=""}) => {
       <Typography component="p" variant="body2" align="center">
         {msg}
       </Typography>
-      <Typography variant="body2" gutterBottom textAlign="center" color="text.secondary" component="p" mt={3}>
+      {/*<Typography variant="body2" gutterBottom textAlign="center" color="text.secondary" component="p" mt={3}>
         <Button variant="contained" component="a" href={`sms://+14159881102`} color="primary">
           Send me a SMS message
         </Button>
-      </Typography>
+      </Typography> */}
     </Grid>
   )
 }
