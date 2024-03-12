@@ -6,13 +6,13 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField'
-import MenuItem from '@mui/material/MenuItem'
 import Button from '@mui/material/Button'
 import MultipleSelect from './MultipleSelect'
+import Radios from './Radios'
 
 import {handleSubmitForm} from 'utils/form-helper'
 
-const yesNoOptions = ['Yes', 'No']
+const yesNoOptions = ['No', 'Yes']
 const tempMethods = [
   'Wax',
   'Shaving',
@@ -85,7 +85,7 @@ const HealthForm = () => {
     zip: '',
     referredBy: '',
     skinConcerns: '',
-    hadPastElectro: '',
+    hadPastElectro: 'No',
     tempMethodUsed: []
   }
 
@@ -130,7 +130,7 @@ const HealthForm = () => {
         </Typography>
       </Box>
       <Box>
-        <form
+    <form
           onSubmit={(event) => {
             event.preventDefault()
             formik.handleSubmit()
@@ -182,6 +182,7 @@ const HealthForm = () => {
                 onBlur={formik.handleBlur}
                 error={formik.touched.phoneNumber && Boolean(formik.errors.phoneNumber)}
                 helperText={formik.touched.phoneNumber && formik.errors.phoneNumber}
+                
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -315,31 +316,18 @@ const HealthForm = () => {
               />
             </Grid>
             <Grid item xs={12}>
-              <TextField
-                InputLabelProps={{shrink: true}}
-                select
-                id="hadPastElectro"
-                sx={{height: 54}}
-                label="Have you undergone electrolysis treatments?"
-                variant="outlined"
-                color="primary"
-                size="medium"
-                name="hadPastElectro"
+              <Radios
                 fullWidth
+                name="hadPastElectro"
+                label="Have you undergone electrolysis treatments?"
+                radioOptions={yesNoOptions}
                 value={formik.values.hadPastElectro}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 error={formik.touched.hadPastElectro && Boolean(formik.errors.hadPastElectro)}
                 helperText={formik.touched.hadPastElectro && formik.errors.hadPastElectro}
-              >
-                {yesNoOptions.map((option) => (
-                  <MenuItem key={option} value={option}>
-                    {option}
-                  </MenuItem>
-                ))}
-              </TextField>
+              />
             </Grid>
-
             <Grid item xs={12}>
               <MultipleSelect
                 label="What temporary hair removal methods have you used?"
@@ -353,7 +341,6 @@ const HealthForm = () => {
                 stateValue={formik.values.tempMethodUsed}
               />
             </Grid>
-
             <Grid item container justifyContent={'center'} xs={12}>
               {!formState ? (
                 <Button
