@@ -8,7 +8,6 @@ import Box from '@mui/material/Box'
 
 export default function RowRadioButtonsGroup({radioOptions = [], ...props}) {
   const labelStyles = {
-    /*transform: 'translate(-36px, -11px) scale(0.75)',*/
     background: 'white',
     width: 'fit-content',
     paddingX: '4px',
@@ -26,8 +25,12 @@ export default function RowRadioButtonsGroup({radioOptions = [], ...props}) {
   }
   return (
     <Box>
-      <FormControl sx={{border: '1px solid #c4c4c4c4', borderRadius: 1, padding: 1}} fullWidth error={props.error}>
-        <FormLabel id={`${props.name.toLowerCase()}-group-label`} sx={{...labelStyles}}>
+      <FormControl
+        sx={{border: `1px solid ${props.error ? '#d32f2fed' : '#c4c4c4'}`, borderRadius: 1, padding: 1}}
+        fullWidth
+        error={props.error}
+      >
+        <FormLabel id={`${props.name.toLowerCase()}-group-label`} sx={{...labelStyles}} shrink={true}>
           {props.label}
         </FormLabel>
         <RadioGroup

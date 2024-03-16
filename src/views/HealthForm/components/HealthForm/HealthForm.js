@@ -10,6 +10,7 @@ import Button from '@mui/material/Button'
 import MultipleSelect from './MultipleSelect'
 import Radios from './Radios'
 
+
 import {handleSubmitForm} from 'utils/form-helper'
 
 const yesNoOptions = ['No', 'Yes']
@@ -71,7 +72,6 @@ const validationSchema = yup.object({
 })
 
 const HealthForm = () => {
-  //const theme = useTheme()
 
   const [formState, setFormState] = useState('')
 
@@ -375,11 +375,6 @@ const SuccessBlock = ({msg = ''}) => {
       <Typography component="p" variant="body2" align="center">
         {msg}
       </Typography>
-      {/*<Typography variant="body2" gutterBottom textAlign="center" color="text.secondary" component="p" mt={3}>
-        <Button variant="contained" component="a" href={`sms://+14159881102`} color="primary">
-          Send me a SMS message
-        </Button>
-      </Typography> */}
     </Grid>
   )
 }
