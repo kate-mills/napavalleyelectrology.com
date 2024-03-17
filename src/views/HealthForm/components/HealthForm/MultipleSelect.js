@@ -23,7 +23,7 @@ export default function MultipleSelectCheckmarks({label="label", list=[], stateV
 
 
   return (
-      <FormControl fullWidth>
+      <FormControl fullWidth required={props.required}>
         <InputLabel id={props.name} shrink={true} sx={{background: 'white', paddingX: 0.5}}>{label}</InputLabel>
         <Select
           labelId={props.name}

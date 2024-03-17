@@ -142,12 +142,11 @@ const HealthForm = () => {
           autoComplete="on"
         >
           <input type="hidden" name="form-name" value="health-form" />
-
           {/*<Grid item xs={12} sm={6}> <Typography variant={'subtitle1'} sx={{marginBottom: 2}} fontWeight={700}> General Information </Typography> </Grid>*/}
           <Grid container spacing={4}>
             <Grid item xs={12}>
               <TextField
-                label="Full name *"
+                label="Full name"
                 InputLabelProps={{shrink: true}}
                 variant="outlined"
                 color="primary"
@@ -164,6 +163,123 @@ const HealthForm = () => {
                   backgroundColor: 'white !important',
                 }}
                 autoComplete="name"
+                required
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                sx={{height: 54}}
+                label="Phone Number"
+                InputLabelProps={{shrink: true}}
+                fullWidth
+                variant="outlined"
+                type="tel"
+                color="primary"
+                size="medium"
+                name="phoneNumber"
+                value={formik.values.phoneNumber}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                error={formik.touched.phoneNumber && Boolean(formik.errors.phoneNumber)}
+                helperText={formik.touched.phoneNumber && formik.errors.phoneNumber}
+                autoComplete="phone"
+                required
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                id="email"
+                name="email"
+                InputLabelProps={{shrink: true}}
+                label="Email"
+                type="email"
+                value={formik.values.email}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                error={formik.touched.email && Boolean(formik.errors.email)}
+                helperText={formik.touched.email && formik.errors.email}
+                sx={{height: 54}}
+                variant="outlined"
+                color="primary"
+                size="medium"
+                fullWidth
+                required
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                sx={{height: 54}}
+                label="Address"
+                InputLabelProps={{shrink: true}}
+                variant="outlined"
+                color="primary"
+                size="medium"
+                name="address"
+                id="address"
+                fullWidth
+                value={formik.values.address}
+                onBlur={formik.handleBlur}
+                onChange={formik.handleChange}
+                error={formik.touched.address && Boolean(formik.errors.address)}
+                helperText={formik.touched.address && formik.errors.address}
+                required
+              />
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <TextField
+                sx={{height: 54}}
+                label="City"
+                InputLabelProps={{shrink: true}}
+                variant="outlined"
+                color="primary"
+                size="medium"
+                name="city"
+                id="city"
+                fullWidth
+                value={formik.values.city}
+                onBlur={formik.handleBlur}
+                onChange={formik.handleChange}
+                error={formik.touched.city && Boolean(formik.errors.city)}
+                helperText={formik.touched.city && formik.errors.city}
+                required
+              />
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <TextField
+                sx={{height: 54}}
+                InputLabelProps={{shrink: true}}
+                label="State"
+                variant="outlined"
+                color="primary"
+                size="medium"
+                name="state"
+                id="state"
+                fullWidth
+                value={formik.values.state}
+                onBlur={formik.handleBlur}
+                onChange={formik.handleChange}
+                error={formik.touched.state && Boolean(formik.errors.state)}
+                helperText={formik.touched.state && formik.errors.state}
+                required
+              />
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <TextField
+                sx={{height: 54}}
+                InputLabelProps={{shrink: true}}
+                label="Zip"
+                variant="outlined"
+                color="primary"
+                size="medium"
+                name="zip"
+                id="zip"
+                fullWidth
+                value={formik.values.zip}
+                onBlur={formik.handleBlur}
+                onChange={formik.handleChange}
+                error={formik.touched.zip && Boolean(formik.errors.zip)}
+                helperText={formik.touched.zip && formik.errors.zip}
+                required
               />
             </Grid>
             <Grid item xs={12}>
@@ -184,120 +300,6 @@ const HealthForm = () => {
                 helperText={formik.touched.referredBy && formik.errors.referredBy}
               />
             </Grid>
-
-            <Grid item xs={12} sm={6}>
-              <TextField
-                sx={{height: 54}}
-                label="Phone Number *"
-                InputLabelProps={{shrink: true}}
-                fullWidth
-                variant="outlined"
-                type="tel"
-                color="primary"
-                size="medium"
-                name="phoneNumber"
-                value={formik.values.phoneNumber}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                error={formik.touched.phoneNumber && Boolean(formik.errors.phoneNumber)}
-                helperText={formik.touched.phoneNumber && formik.errors.phoneNumber}
-                autoComplete="phone"
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                id="email"
-                name="email"
-                InputLabelProps={{shrink: true}}
-                label="Email *"
-                type="email"
-                value={formik.values.email}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                error={formik.touched.email && Boolean(formik.errors.email)}
-                helperText={formik.touched.email && formik.errors.email}
-                sx={{height: 54}}
-                variant="outlined"
-                color="primary"
-                size="medium"
-                fullWidth
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                sx={{height: 54}}
-                label="Address *"
-                InputLabelProps={{shrink: true}}
-                variant="outlined"
-                color="primary"
-                size="medium"
-                name="address"
-                id="address"
-                fullWidth
-                value={formik.values.address}
-                onBlur={formik.handleBlur}
-                onChange={formik.handleChange}
-                error={formik.touched.address && Boolean(formik.errors.address)}
-                helperText={formik.touched.address && formik.errors.address}
-              />
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <TextField
-                sx={{height: 54}}
-                label="City *"
-                InputLabelProps={{shrink: true}}
-                variant="outlined"
-                color="primary"
-                size="medium"
-                name="city"
-                id="city"
-                fullWidth
-                value={formik.values.city}
-                onBlur={formik.handleBlur}
-                onChange={formik.handleChange}
-                error={formik.touched.city && Boolean(formik.errors.city)}
-                helperText={formik.touched.city && formik.errors.city}
-              />
-            </Grid>
-
-            <Grid item xs={12} sm={4}>
-              <TextField
-                sx={{height: 54}}
-                InputLabelProps={{shrink: true}}
-                label="State *"
-                variant="outlined"
-                color="primary"
-                size="medium"
-                name="state"
-                id="state"
-                fullWidth
-                value={formik.values.state}
-                onBlur={formik.handleBlur}
-                onChange={formik.handleChange}
-                error={formik.touched.state && Boolean(formik.errors.state)}
-                helperText={formik.touched.state && formik.errors.state}
-              />
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <TextField
-                sx={{height: 54}}
-                InputLabelProps={{shrink: true}}
-                label="Zip *"
-                variant="outlined"
-                color="primary"
-                size="medium"
-                name="zip"
-                id="zip"
-                fullWidth
-                value={formik.values.zip}
-                onBlur={formik.handleBlur}
-                onChange={formik.handleChange}
-                error={formik.touched.zip && Boolean(formik.errors.zip)}
-                helperText={formik.touched.zip && formik.errors.zip}
-              />
-            </Grid>
-            {/*<Grid item xs={12}> <Divider /> </Grid>*/}
-            {/*<Grid item xs={12}><Typography variant={'subtitle1'} marginBottom={-1} fontWeight={700}>General Hygiene</Typography></Grid>*/}
             <Grid item xs={12}>
               <TextField
                 InputLabelProps={{shrink: true}}
@@ -319,13 +321,14 @@ const HealthForm = () => {
             <Grid item xs={12}>
               <Radios
                 name="hadPastElectro"
-                label="Have you undergone electrolysis treatments? *"
+                label="Have you undergone electrolysis treatments?"
                 radioOptions={yesNoOptions}
                 value={formik.values.hadPastElectro}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 error={formik.touched.hadPastElectro && Boolean(formik.errors.hadPastElectro)}
                 helperText={formik.touched.hadPastElectro && formik.errors.hadPastElectro}
+                required
               />
             </Grid>
             <Grid item xs={12}>

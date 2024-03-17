@@ -29,6 +29,7 @@ export default function RowRadioButtonsGroup({radioOptions = [], ...props}) {
         sx={{border: `1px solid ${props.error ? '#d32f2fed' : '#c4c4c4'}`, borderRadius: 1, padding: 1}}
         fullWidth
         error={props.error}
+        required={props.required}
       >
         <FormLabel id={`${props.name.toLowerCase()}-group-label`} sx={{...labelStyles}} shrink={true}>
           {props.label}
