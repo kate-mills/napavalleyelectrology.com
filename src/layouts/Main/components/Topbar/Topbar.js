@@ -4,7 +4,7 @@ import Link from 'components/Link'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 
-const Topbar = ({color = 'secondary'}) => {
+const Topbar = ({color = 'secondary', colorInvert=false}) => {
   return (
     <Box
       display={'flex'}
@@ -16,9 +16,9 @@ const Topbar = ({color = 'secondary'}) => {
       width={'100%'}
       alignItems={'center'}
     >
-      <Box display={'flex'} alignItems={'center'} width={'100%'} justifyContent={{ xs: 'left', sm: 'flex-start' }}mt={1}>
-      <Box component={Link} to="/" title="Napa Valley Electrology & Skin Care" color={color}>
-          <Typography variant={'body2'} fontWeight={600} color={color} mr={1}>
+      <Box display={'flex'} justifyItems={'flex-start'} width={'100%'}>
+        <Box component={Link} to="/" title="Napa Valley Electrology & Skin Care">
+          <Typography variant={'body2'} fontWeight={600} color={!!colorInvert ? 'white': color}>
             {'Napa Valley Electrology + Skin Care'}
           </Typography>
         </Box>
