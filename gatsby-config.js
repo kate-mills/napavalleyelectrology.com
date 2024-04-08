@@ -43,7 +43,7 @@ module.exports = {
         city: `Napa`,
         state: `CA`,
         zip: `94559`,
-        country: `USA`
+        country: `US`
       },
       email: `hilary@napavalleyelectrology.com`,
       name: `Napa Valley Electrology & Skin Care`,
