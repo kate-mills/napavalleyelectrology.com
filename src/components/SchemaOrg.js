@@ -22,7 +22,7 @@ export default React.memo(({description, title, image}) => {
       url: 'https://napavalleyelectrology.com',
       address: {
         '@type': 'PostalAddress',
-        addressCountry: 'USA',
+        addressCountry: 'US',
         addressLocality: 'Napa',
         addressRegion: 'CA',
         name: 'Napa Valley Electrology & Skin Care',
