@@ -20,6 +20,7 @@ const Footer = () => {
           variant="h4"
           align={'center'}
           sx={{
+            color: 'primary.contrastText',
             fontWeight: 'medium'
           }}
         >
@@ -58,19 +59,6 @@ const Footer = () => {
         >
           <Box component="a" color="primary.contrastText" sx={{textDecoration: 'none'}} href={icon} download>
             Download the guide
-          </Box>
-        </Box>
-        <Box
-          component={Button}
-          variant="outlined"
-          color="primary"
-          size="large"
-          fullWidth={!isMd}
-          marginTop={{xs: 1, sm: 0}}
-          marginLeft={{sm: 2}}
-        >
-          <Box component="a" color="primary.main" sx={{ textDecoration: 'none'}} href="mailto:hilary@napavalleyelectrology.com">
-            Email Hilary
           </Box>
         </Box>
       </Box>

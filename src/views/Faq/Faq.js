@@ -26,7 +26,7 @@ const Faq = () => {
         <Container maxWidth={800}>
           <Content />
         </Container>
-        <Box bgcolor={theme.palette.alternate.main}>
+        <Box bgcolor={theme.palette.primary['900']}>
           <Container>
             <Footer />
           </Container>
