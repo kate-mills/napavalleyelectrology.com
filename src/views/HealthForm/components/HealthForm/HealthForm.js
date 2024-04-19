@@ -66,8 +66,7 @@ const validationSchema = yup.object({
   skinConcerns: yup.string().trim().max(400, 'Please limit your message to 400 characters.'),
   hadPastElectro: yup
     .string()
-    .oneOf([...yesNoOptions])
-    .required(`Please select 'yes' or 'no'.`),
+    .oneOf([...yesNoOptions]),
   tempMethodUsed: yup.array().of(yup.string())
 })
 
@@ -85,7 +84,7 @@ const HealthForm = () => {
     zip: '',
     referredBy: '',
     skinConcerns: '',
-    hadPastElectro: '',
+    hadPastElectro: 'No',
     tempMethodUsed: []
   }
 
@@ -116,7 +115,6 @@ const HealthForm = () => {
     !formik.values.city ||
     !formik.values.state ||
     !formik.values.zip ||
-    !formik.values.hadPastElectro ||
     formState
 
   return (
@@ -147,7 +145,6 @@ const HealthForm = () => {
             <Grid item xs={12}>
               <TextField
                 label="Full name"
-                InputLabelProps={{shrink: true}}
                 variant="outlined"
                 color="primary"
                 size="medium"
@@ -170,7 +167,6 @@ const HealthForm = () => {
               <TextField
                 sx={{height: 54}}
                 label="Phone Number"
-                InputLabelProps={{shrink: true}}
                 fullWidth
                 variant="outlined"
                 type="tel"
@@ -190,7 +186,6 @@ const HealthForm = () => {
               <TextField
                 id="email"
                 name="email"
-                InputLabelProps={{shrink: true}}
                 label="Email"
                 type="email"
                 value={formik.values.email}
@@ -210,7 +205,6 @@ const HealthForm = () => {
               <TextField
                 sx={{height: 54}}
                 label="Address"
-                InputLabelProps={{shrink: true}}
                 variant="outlined"
                 color="primary"
                 size="medium"
@@ -229,7 +223,6 @@ const HealthForm = () => {
               <TextField
                 sx={{height: 54}}
                 label="City"
-                InputLabelProps={{shrink: true}}
                 variant="outlined"
                 color="primary"
                 size="medium"
@@ -247,7 +240,6 @@ const HealthForm = () => {
             <Grid item xs={12} sm={4}>
               <TextField
                 sx={{height: 54}}
-                InputLabelProps={{shrink: true}}
                 label="State"
                 variant="outlined"
                 color="primary"
@@ -266,7 +258,6 @@ const HealthForm = () => {
             <Grid item xs={12} sm={4}>
               <TextField
                 sx={{height: 54}}
-                InputLabelProps={{shrink: true}}
                 label="Zip"
                 variant="outlined"
                 color="primary"
@@ -285,7 +276,6 @@ const HealthForm = () => {
             <Grid item xs={12}>
               <TextField
                 sx={{height: 54}}
-                InputLabelProps={{shrink: true}}
                 label="Referred By"
                 variant="outlined"
                 color="primary"
@@ -302,7 +292,6 @@ const HealthForm = () => {
             </Grid>
             <Grid item xs={12}>
               <TextField
-                InputLabelProps={{shrink: true}}
                 label="Do you have any spefiic skin concerns?"
                 multiline
                 rows={6}
