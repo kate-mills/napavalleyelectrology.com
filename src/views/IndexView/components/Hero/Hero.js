@@ -36,7 +36,6 @@ const Hero = () => {
         sx={{
           position: 'absolute',
           objectFit: 'cover',
-          fontFamily: 'object-fit: cover;',
           top: 0,
           left: 0,
           width: '100%',
@@ -44,9 +43,9 @@ const Hero = () => {
           zIndex: -1,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
-          backgroundPosition: 'center bottom',
+          backgroundPosition: 'center bottom !important',
           backgroundImage: `url(${HeroImg})`,
-          filter: 'brightness(0.7)'
+          filter: 'brightness(0.5)'
         }}
       />
       <Container position={'relative'} zIndex={2}>
