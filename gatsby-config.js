@@ -17,7 +17,7 @@ module.exports = {
         description: `An integrated approach to skin health. Permanent hair removal via electrolysis + clinical skin care treatments. Gender Affirming and surgery prep services provided with compassion and understanding.`,
         lang: `en`,
         start_url: `/`,
-        icon: `src/images/icon.png`,
+        icon: `src/images/NVEIcon.png`,
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `browser`,
