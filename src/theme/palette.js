@@ -12,9 +12,9 @@ export const light = {
     contrastText: '#fff'
   },
   secondary: {
-    light: '#c6af97',
-    main: '#7e613a',
-    dark: '#482e18',
+    light: '#eaeaea',
+    main: '#a3a3a3',
+    dark: '#727272',
     contrastText: 'rgba(225, 225, 225, 0.87)'
   },
   text: {
