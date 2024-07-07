@@ -105,9 +105,8 @@ const Content = () => {
                 'Consistency is key. We must treat the hairs as they come in to get a higher percentage of decline. Depending on the size of the area and density of the hair, your treatment can be anywhere from 15 minutes to 3 hours a week for the first three months. After that, we can reduce the time and space out the treatments. Eventually, you will come in for a few hairs every few months until we get them all.'
             },
             { title: 'Is electrolysis safe?', answerContainsList: false, subtitle: 'When performed by a qualified and experienced electrologist, electrolysis is a safe and effective hair removal method. However, as with any procedure, some risks are involved, such as infection or scarring.' },
-            { title: 'Is electrolysis expensive?', answerContainsList: false, subtitle: 'While it may be more expensive than some temporary hair removal methods, in the long run, it can be cost-effective as it offers permanent hair removal results. Additionally, we offer packages to make the treatment more accessible and affordable.' }
 
-            //{title: '', answerContainsList: false, subtitle: ''}
+            { title: 'Is electrolysis painful?', answerContainsList: false, subtitle: 'The level of discomfort varies from person to person, but many people report a slight heat or pricking sensation during the procedure.' },
           ]}
         />
       </Box>
@@ -120,13 +119,16 @@ const Content = () => {
               title: 'What should I do before my treatment?',
               answerContainsList: true,
               subtitle:
-                'Proper preparation before your treatment can help ensure the procedure is comfortable. Here are some steps you can take to prepare:',
+                'Proper preparation before treatment ensures effectiveness, safety, and comfort. Here are the steps to prepare:',
               list: [
-                'Do not pluck or wax the area for at least a week before your treatment. The hair must be present in the follicle for the electrolysis to be effective.',
-                'Refrain from shaving the area for at least 24 hours before your appointment. Not shaving will ensure the hair is long enough for the electrologist to see and extract.',
-                'Avoid skincare products containing alpha-hydroxy acid, salicylic acid, or benzoyl peroxide for at least 24 hours before treatment. These ingredients can irritate the skin and make the treatment uncomfortable.',
+                'Do not pluck or wax the area for at least a week before your treatment. For electrolysis to be effective, hair must be present in the follicle.',
+                'Refrain from shaving the area for at least 24 hours before your appointment. The hair must be long enough for the electrologist to see and extract.',
+                'Avoid skincare products containing alpha-hydroxy acid, salicylic acid, or benzoyl peroxide for at least 24 hours before treatment. These ingredients can irritate the skin, making the treatment uncomfortable.',
                 'Eat a light meal before your appointment to avoid feeling lightheaded or faint during the treatment.',
-                'Wear loose and comfortable clothing to your appointment to avoid irritating the treated area after the treatment.  Following these steps ensures that your electrolysis treatment is effective, comfortable, and safe.'
+                'Wear loose and comfortable clothing to your appointment to avoid irritating the treated area after the treatment.',
+                'Refrain from caffeine on the day of your appointment, as consuming caffeine will make the treatment less easy to tolerate.',
+                'Be sure to hydrate your body with lots of water in the days before your appointment.',
+                'Some clients apply a thin layer of topical numbing cream, such as 5% lidocaine, as their doctor prescribes or as found at a pharmacy. The cream is generously applied to the skin in the area to be treated 60 minutes before their appointment and covered with Saran wrap. Additionally, the cream is applied generously again 30 minutes before their appointment and covered with Saran wrap until they arrive, ensuring optimum comfort for their treatment.',
               ]
             },
             {
@@ -135,16 +137,17 @@ const Content = () => {
               subtitle:
                 'After electrolysis, you may experience redness, swelling, and tenderness, which should subside within a few hours to a day.  After your treatment it is advisable to:',
               list: [
+                'Apply ice packs periodically to the treated area for 24-48 hours post-treatment to help reduce any swelling that might occur.',
                 'Keep the area clean.',
                 'Avoid picking or scratching the treated area.',
                 'Avoid direct sun exposure and wear SPF.',
                 'Avoid strenuous activities.',
-                'Apply ice packs periodically to the treated area for 24-48 hours post-treatment to help reduce any swelling that might occur.',
               ]
             }
           ]}
         />
       </Box>
+
 
       <Box marginBottom={6}>
         <FaqGroupItem
@@ -156,11 +159,8 @@ const Content = () => {
               subtitle:
                 'This is not true.  We provide gender affirming and surgery prep services with compassion and understanding. Electrolysis is a safe and effective hair removal method for all genders. Additionally, some people believe that electrolysis is only suitable for removing facial hair, but it can be used on any part of the body.'
             },
-            {
-              title: 'Is electrolysis painful?',
-              answerContainsList: false,
-              subtitle: 'The level of discomfort varies from person to person, but many people report a slight heat or pricking sensation during the procedure.'
-            },
+            { title: 'Is electrolysis expensive?', answerContainsList: false, subtitle: 'While it may be more expensive than some temporary hair removal methods, in the long run, it can be cost-effective as it offers permanent hair removal results. Additionally, we offer packages to make the treatment more accessible and affordable.' },
+
           ]}
         />
       </Box>
