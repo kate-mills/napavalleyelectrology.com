@@ -5,7 +5,7 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
-import icon from 'images/electrolysis-instructions.pdf'
+import icon from 'images/electrology-instructions.pdf'
 
 const Footer = () => {
   const theme = useTheme()
