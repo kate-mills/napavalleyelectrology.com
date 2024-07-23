@@ -56,12 +56,12 @@ const Hero = () => {
             gutterBottom
             sx={{
               fontWeight: 900,
-              color: 'primary.light',
+              color: 'common.white',
               textTransform: 'uppercase'
             }}
           >Electrology + Skin Care
           </Typography>
-          <Typography variant="h5" component="h2" sx={{color: 'primary.light'}}>
+          <Typography variant="h5" component="h2" sx={{color: 'common.white'}}>
             Permanent hair removal via electrolysis + clinical skin care treatments. Gender Affirming and surgery prep
             services provided with compassion and understanding.
           </Typography>
