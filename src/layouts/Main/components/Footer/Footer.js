@@ -32,7 +32,7 @@ const Footer = () => {
         </Box>
       </Grid>
       <Grid item xs={12}>
-        <Typography align={'center'} variant={'subtitle2'} color="text.secondary" gutterBottom>
+        <Typography component={'h5'} align={'center'} variant={'subtitle2'} color="text.secondary" gutterBottom>
           Napa Valley Electrology & Skin Care
         </Typography>
         <Typography align={'center'} variant={'caption'} color="text.secondary" component={'p'}>

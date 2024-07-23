@@ -15,7 +15,7 @@ const FaqGroupItem = ({title, items}) => {
   return (
     <Box>
       <Box marginBottom={2}>
-        <Typography fontWeight={700} variant={'h5'}>
+        <Typography fontWeight={700} component={'h4'} variant={'h5'}>
           {title}
         </Typography>
       </Box>

@@ -18,7 +18,7 @@ const Headline = () => {
       <Typography variant="h2" align={'center'} fontWeight={700} gutterBottom>
     Electrolysis FAQs
       </Typography>
-      <Typography variant="h6" align={'center'} color={'textSecondary'}>
+      <Typography variant="h6" component={'h3'} align={'center'} color={'textSecondary'}>
         Search our FAQ for answers about electrolysis with Hilary.
       </Typography>
     </Box>

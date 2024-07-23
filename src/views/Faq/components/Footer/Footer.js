@@ -5,7 +5,7 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
-import icon from 'images/electrology-instructions.pdf'
+import guide from 'images/electrology-instructions.jpg'
 
 const Footer = () => {
   const theme = useTheme()
@@ -57,7 +57,7 @@ const Footer = () => {
             </svg>
           }
         >
-          <Box component="a" color="primary.contrastText" sx={{textDecoration: 'none'}} href={icon} download>
+          <Box component="a" color="primary.contrastText" sx={{textDecoration: 'none'}} href={guide} download>
             Download the guide
           </Box>
         </Box>

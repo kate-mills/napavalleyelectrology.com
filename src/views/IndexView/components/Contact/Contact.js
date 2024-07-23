@@ -29,6 +29,7 @@ const Contact = () => {
         <Box>
           <Box marginBottom={1}>
             <Typography
+    component={'h3'}
               variant="h4"
               sx={{
                 fontWeight: 700
@@ -37,7 +38,7 @@ const Contact = () => {
             </Typography>
           </Box>
           <Box>
-            <Typography variant="h6" color={'text.secondary'}>Napa Valley Electrology & Skin Care is in Paradigm Medical Aesthetics.
+            <Typography component={'h4'} variant="h6" color={'text.secondary'}>Napa Valley Electrology & Skin Care is in Paradigm Medical Aesthetics.
             </Typography>
           </Box>
         </Box>
@@ -70,13 +71,15 @@ const Contact = () => {
             <Typography variant={'body1'} gutterBottom sx={{fontWeight: 'medium'}}>
               Email:
             </Typography>
-            <Typography variant={'subtitle1'}>hilary@napavalleyelectrology.com</Typography>
+            <Typography  component={'p'} variant={'subtitle1'}>
+    hilary@napavalleyelectrology.com</Typography>
           </Grid>
           <Grid item xs={12}>
             <Typography variant={'body1'} gutterBottom sx={{fontWeight: 'medium'}}>
               Address:
             </Typography>
-            <Typography variant={'subtitle1'}>1812 Jefferson St Napa, CA 94559</Typography>
+            <Typography  component={'p'} variant={'subtitle1'}>
+    1812 Jefferson St Napa, CA 94559</Typography>
           </Grid>
         </Grid>
       </Box>
