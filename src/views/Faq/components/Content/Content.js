@@ -40,7 +40,7 @@ const FaqGroupItem = ({title, items}) => {
             <AccordionDetails>
               {item.subtitle ? <Typography color="text.secondary">{item.subtitle}</Typography> : <Box mt={-3}></Box>}
               {item.isDecimalList || item.isBulletList ? (
-                <List sx={{listStyle: item.isDecimalList ? 'decimal' : 'bullet', pl: 4}}>
+                <List sx={{listStyle: item.isDecimalList ? 'decimal' : 'disc', pl: 4}}>
                   {item.list
                     ? item.list.map((txt, i) => {
                         return (
@@ -144,13 +144,13 @@ const Content = () => {
                 'Proper preparation before treatment ensures effectiveness, safety, and comfort. Here are the steps to prepare:',
               list: [
                 'Do not pluck or wax the area for at least a week before your treatment. For electrolysis to be effective, hair must be present in the follicle.',
-                'Refrain from shaving the area for at least 24 hours before your appointment. The hair must be long enough for the electrologist to see and extract.',
+                'Please shave the treatment area 2-5 days before your appointment. The hair must be long enough for the electrologist to see and extract.',
                 'Avoid skincare products containing alpha-hydroxy acid, salicylic acid, or benzoyl peroxide for at least 24 hours before treatment. These ingredients can irritate the skin, making the treatment uncomfortable.',
                 'Eat a light meal before your appointment to avoid feeling lightheaded or faint during the treatment.',
                 'Wear loose and comfortable clothing to your appointment to avoid irritating the treated area after the treatment.',
                 'Refrain from caffeine on the day of your appointment, as consuming caffeine will make the treatment less easy to tolerate.',
                 'Be sure to hydrate your body with lots of water in the days before your appointment.',
-                'Some clients apply a thin layer of topical numbing cream, such as 5% lidocaine, as their doctor prescribes or as found at a pharmacy. The cream is generously applied to the skin in the area to be treated 60 minutes before their appointment and covered with Saran wrap. Additionally, the cream is applied generously again 30 minutes before their appointment and covered with Saran wrap until they arrive, ensuring optimum comfort for their treatment.'
+                'Some clients apply a thin layer of topical numbing cream, such as lidocaine 4% or (5% by prescription). The cream is generously applied to the skin in the area to be treated 60 minutes before their appointment and covered with Saran wrap. Additionally, the cream is applied generously again 30 minutes before their appointment and covered with Saran wrap until they arrive, ensuring optimum comfort for their treatment.'
               ]
             },
             {
