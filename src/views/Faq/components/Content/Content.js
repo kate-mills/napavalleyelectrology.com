@@ -184,7 +184,7 @@ const Content = () => {
               title: 'Is electrolysis expensive?',
               isDecimalList: false,
               subtitle:
-                'While it may be more expensive than some temporary hair removal methods, in the long run, it can be cost-effective as it offers permanent hair removal results. Additionally, we offer packages to make the treatment more accessible and affordable.'
+                'While it may be more expensive than some temporary hair removal methods, in the long run, it can be cost-effective as it offers permanent hair removal results.'
             }
           ]}
         />
@@ -192,19 +192,14 @@ const Content = () => {
 
       <Box>
         <FaqGroupItem
-          title={'Packages & Pricing'}
+          title={'Pricing'}
           items={[
             {
               title: 'What is the cost of electrolysis?',
-              subtitle: 'The regular hourly rate is $200. (For package details, please see below.)',
+              subtitle: 'The regular hourly rate is $200.',
               isDecimalList: false,
-              isBulletList: true,
-              bulletList: [
-                {
-                  bold: 'Buy 9, Get 1 FREE.',
-                  text: 'Prepay for nine electrolysis treatments and get one free, totaling ten treatments of the same length.'
-                }
-              ]
+              isBulletList: false,
+              //bulletList: [ { bold: 'Buy 9, Get 1 FREE.', text: 'Prepay for nine electrolysis treatments and get one free, totaling ten treatments of the same length.' } ]
             }
           ]}
         />
