@@ -33,8 +33,10 @@ const Footer = () => {
         justifyContent={'center'}
         alignItems={{xs: 'stretched', sm: 'center'}}
       >
-        <Box
-          component={Button}
+        <Button
+          component={'a'}
+          href={guide}
+          download
           variant="contained"
           color="primary"
           size="large"
@@ -57,10 +59,10 @@ const Footer = () => {
             </svg>
           }
         >
-          <Box component="a" color="primary.contrastText" sx={{textDecoration: 'none'}} href={guide} download>
-            Download the guide
+          <Box component="span">
+            <Typography color="primary.contrastText">Download the guide</Typography>
           </Box>
-        </Box>
+        </Button>
       </Box>
     </Box>
   )
