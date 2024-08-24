@@ -36,7 +36,7 @@ const Footer = () => {
           Napa Valley Electrology & Skin Care
         </Typography>
         <Typography align={'center'} variant={'caption'} color="text.secondary" component={'p'}>
-          Providing ELECTROLYSIS Permanent Hair Removal,corrective SKIN CARE, LASH EXTENSIONS, WAXING & TINTING
+          Providing ELECTROLYSIS Permanent Hair Removal, corrective SKIN CARE, LASH EXTENSIONS, WAXING & TINTING
         </Typography>
       </Grid>
     </Grid>
