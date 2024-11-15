@@ -52,6 +52,7 @@ const Contact = () => {
             marginHeight={0}
             marginWidth={0}
             scrolling="no"
+            draggable="true"
             src="https://maps.google.com/maps?width=100%&height=100%&hl=en&q=1920%20Lernhart%20St%20Napa%20CA&ie=UTF8&t=&z=14&iwloc=B&output=embed"
             style={{
               minHeight: 300,
@@ -79,7 +80,9 @@ const Contact = () => {
               Address:
             </Typography>
             <Typography  component={'p'} variant={'subtitle1'}>
-    1920 Lernhart St Napa, CA 94559</Typography>
+              1920 Lernhart St, Suite A</Typography>
+            <Typography  component={'p'} variant={'subtitle1'}>
+            Napa, CA 94559</Typography>
           </Grid>
         </Grid>
       </Box>
