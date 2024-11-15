@@ -38,7 +38,7 @@ const Contact = () => {
             </Typography>
           </Box>
           <Box>
-            <Typography component={'h4'} variant="h6" color={'text.secondary'}>Napa Valley Electrology & Skin Care is in Paradigm Medical Aesthetics.
+            <Typography component={'h4'} variant="h6" color={'text.secondary'}>Napa Valley Electrology + Skin Care is in Paradigm Medical Aesthetics.
             </Typography>
           </Box>
         </Box>

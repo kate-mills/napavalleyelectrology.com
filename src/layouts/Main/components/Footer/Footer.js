@@ -33,7 +33,7 @@ const Footer = () => {
       </Grid>
       <Grid item xs={12}>
         <Typography component={'h5'} align={'center'} variant={'subtitle2'} color="text.secondary" gutterBottom>
-          Napa Valley Electrology & Skin Care
+          Napa Valley Electrology + Skin Care
         </Typography>
         <Typography align={'center'} variant={'caption'} color="text.secondary" component={'p'}>
           Providing ELECTROLYSIS Permanent Hair Removal, corrective SKIN CARE, LASH EXTENSIONS, WAXING & TINTING
