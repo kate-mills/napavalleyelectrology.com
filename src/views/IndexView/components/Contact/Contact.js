@@ -53,7 +53,7 @@ const Contact = () => {
             marginWidth={0}
             scrolling="no"
             draggable="true"
-            src="https://maps.google.com/maps?width=100%&height=100%&hl=en&q=1920%20Lernhart%20St%20Napa%20CA&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+            src="https://maps.google.com/maps?width=100%&height=100%&hl=en&q=Napa%20Valley%20Electrology%20And%20Skin%20Care&ie=UTF8&t=&z=14&iwloc=B&output=embed"
             style={{
               minHeight: 300,
               borderRadius: 8,
