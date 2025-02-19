@@ -10,10 +10,10 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
 
-const FaqGroupItem = ({title, items}) => {
+const FaqGroupItem = ({title, id, items}) => {
   const theme = useTheme()
   return (
-    <Box>
+    <Box id={id || '#'}>
       <Box marginBottom={2}>
         <Typography fontWeight={700} component={'h4'} variant={'h5'}>
           {title}
@@ -76,6 +76,7 @@ const FaqGroupItem = ({title, items}) => {
 
 FaqGroupItem.propTypes = {
   title: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   items: PropTypes.array.isRequired
 }
 
@@ -85,6 +86,7 @@ const Content = () => {
       <Box marginBottom={6}>
         <FaqGroupItem
           title={'Basics'}
+          id="basics"
           items={[
             {
               title: 'What is Electrolysis?',
@@ -136,6 +138,7 @@ const Content = () => {
       <Box marginBottom={6}>
         <FaqGroupItem
           title={'Instructions'}
+          id="instructions"
           items={[
             {
               title: 'What should I do before my treatment?',
@@ -173,6 +176,7 @@ const Content = () => {
       <Box marginBottom={6}>
         <FaqGroupItem
           title={'Myths'}
+          id="myths"
           items={[
             {
               title: 'Is electrolysis only for women?',
@@ -193,13 +197,30 @@ const Content = () => {
       <Box>
         <FaqGroupItem
           title={'Pricing'}
+          id="pricing"
           items={[
             {
               title: 'What is the cost of electrolysis?',
-              subtitle: 'The regular hourly rate is $210.',
-              isDecimalList: false,
-              isBulletList: false,
-              //bulletList: [ { bold: 'Buy 9, Get 1 FREE.', text: 'Prepay for nine electrolysis treatments and get one free, totaling ten treatments of the same length.' } ]
+              subtitle: '',
+              isBulletList: true,
+              //list: ['15 minutes - $75', '30 minutes - $110', '45 minutes - $160', '60 minutes - $210']
+              bulletList: [ { bold: '15 minutes - ', text: '$75' }, { bold: '30 minutes - ', text: '$110' }, { bold: '45 minutes - ', text: '$160' }, { bold: '60 minutes - ', text: '$210' }, ]
+            },
+
+            {
+              title: 'What are the cost of your facials?',
+              subtitle: '',
+              isBulletList: true,
+              bulletList: [
+                {
+                  bold: 'Signature Facial - $210',
+                  text: 'Includes double cleanse, dermaplaning, followed by enzymatic or chemical exfoliation, customized masks, steam, extractions, and massage. Transformational results infused with intention and relaxation.'
+                },
+                {
+                  bold: 'Acne Facial - $165',
+                  text: 'Double cleanse, exfoliation, steam mask, and extractions.'
+                },
+              ]
             }
           ]}
         />
