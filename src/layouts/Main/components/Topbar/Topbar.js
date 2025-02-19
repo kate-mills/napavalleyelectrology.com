@@ -16,7 +16,7 @@ const Topbar = ({color = 'secondary', colorInvert=false}) => {
     >
       <Box display={'flex'} justifyItems={'flex-start'} width={'100%'}>
         <Box component={Link} to="/" title="Napa Valley Electrology & Skin Care">
-          <Typography variant={'body2'} component={'h1'} fontWeight={600} color={!!colorInvert ? '#432f33': color}>
+          <Typography variant={'body2'} component={'h1'} fontWeight={600} color={!!colorInvert ? '#FFFFFF': color}>
             {'Napa Valley Electrology + Skin Care'}
           </Typography>
         </Box>

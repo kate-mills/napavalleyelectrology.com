@@ -5,12 +5,10 @@ import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
-
-
-import HilaryImg from 'images/hilary-molloy.jpg'
-import ProductImg from 'images/product.jpg'
-import LegsImg from 'images/legs.jpg'
-import MakeupImg from 'images/makeup.jpg'
+import HilaryImg from 'images/gallery/hilary-molloy-napa.webp'
+import Apilus from 'images/gallery/apilus-marketing-card.webp'
+import TreatmentRoom from 'images/gallery/treatment-room.webp'
+import License from 'images/gallery/hilary-molloy-license.webp'
 
 
 const Gallery = () => {
@@ -21,30 +19,10 @@ const Gallery = () => {
   });
 
   const photos = [
-    {
-      src: ProductImg,
-      source: ProductImg,
-      rows: 1,
-      cols: 2,
-    },
-    {
-      src: HilaryImg, 
-      source: HilaryImg,
-      rows: 2,
-      cols: 1,
-    },
-    {
-      src: MakeupImg,
-      source: MakeupImg,
-      rows: 1,
-      cols: 1,
-    },
-    {
-      src: LegsImg,
-      source: LegsImg,
-      rows: 1,
-      cols: 1,
-    },
+    { src: HilaryImg, rows: 1, cols: 1, position: 'center 40%', alt: "Hilary Molloy, Napa Electrologist and Esthetician, is holding her new Electrology license." },
+    { src: Apilus, rows: 1, cols: 1, position: 'center 35%', alt: "Apilus Pro Electrology Marketing Card, the standard in 100% permanent hair removal." },
+    { src: TreatmentRoom, rows: 2, cols: 1, position: '20% bottom', alt: "Hilary Molloy's treatment room in Napa California" },
+    { src: License, rows: 1, cols: 2, position: '50% 70%', alt: "Hilary Molloy Electrologist License" },
   ];
 
   return (
@@ -61,12 +39,13 @@ const Gallery = () => {
               height={'100%'}
               width={'100%'}
               src={item.src}
-              alt=""
+              alt={item.alt}
               loading="lazy"
               style={{
                 objectFit: 'cover',
                 cursor: 'poiner',
                 borderRadius: 8,
+                objectPosition: item.position,
                 filter:
                   theme.palette.mode === 'dark' ? 'brightness(0.7)' : 'none',
               }}

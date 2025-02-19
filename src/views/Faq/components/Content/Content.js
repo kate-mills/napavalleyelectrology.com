@@ -196,7 +196,7 @@ const Content = () => {
           items={[
             {
               title: 'What is the cost of electrolysis?',
-              subtitle: 'The regular hourly rate is $200.',
+              subtitle: 'The regular hourly rate is $210.',
               isDecimalList: false,
               isBulletList: false,
               //bulletList: [ { bold: 'Buy 9, Get 1 FREE.', text: 'Prepay for nine electrolysis treatments and get one free, totaling ten treatments of the same length.' } ]
