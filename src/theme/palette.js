@@ -5,6 +5,22 @@ export const light = {
   },
   cardShadow: 'rgb(130 155 160 / 11%)',
   mode: 'light',
+  custom: {
+
+    md: '#f9efe9',
+    pink: '#f4e1d5',
+    ltPink: '#fbf5f1',
+    kakhi: '#848058',
+    burgundy: '#6A2226',
+    gray: '#bfbfc1',
+    ltGray: '#f0f0f0',
+    50: '#ecece6',
+    100: '#c6c5b9',
+    200: '#a3a295',
+    300: '#8a8873',
+    400: '#7B785C',
+    500: '#656141',
+  },
   secondary: {
     50: '#fff7f5',
     100: '#faeae8',
@@ -33,7 +49,9 @@ export const light = {
   },
   text: {
     primary: '#4e2f33',
-    secondary: '#55393a'
+    secondary: '#55393a',
+    lt: '#735f62',
+    light: 'rgb(103, 119, 136)',
   },
   divider: 'rgba(0, 0, 0, 0.12)',
   background: {
