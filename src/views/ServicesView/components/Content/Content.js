@@ -9,7 +9,7 @@ const others = [
   {
     title: 'Consultation',
     price: '$30',
-    desc: 'In this 15-minute virtual or in-office meeting, we discuss your desired treatment area, explain the process, and answer all of your questions. To book, call Hilary at (707) 315-3329.'
+    desc: 'In this 15-minute virtual or in-office meeting, we discuss your desired treatment area, explain the process, and answer all of your questions.'
   }
 ]
 
