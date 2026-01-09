@@ -13,7 +13,7 @@ const electro = [
   {
     title: 'Electrolysis',
     price: '$75-$210',
-    desc: 'Permanently remove unwanted hair of any color from your face, underarms, toes, or any other area! Each person is different, but commitment to the process is key to achieving 100% hair-free results. Each session is priced based on the appointment length. Fifteen minutes of electrolysis is $75. One full hour of electrolysis is $210. You will likely need a series of sessions to reach your goal.'
+    desc: 'Permanently remove unwanted hair of any color from your face, underarms, toes, or any other area! Each person is different, but commitment to the process is key to achieving 100% hair-free results. Each session is priced based on the appointment length. You will likely need a series of sessions to reach your goal.'
   },
 
   {title: '15 minute session', price: '$75'},
@@ -58,19 +58,18 @@ const Service = ({item}) => {
   return (
     <Box>
       <Box sx={{
-        padding: 1,
-        paddingBottom: 0,
+        paddingTop: 1,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-start',
         flexWrap: {xs: 'wrap', sm: 'wrap', md: 'nowrap'}}}>
-        <Typography gutterBottom variant={variant} component={'p'} fontWeight={400}>{item.title}</Typography>
-        <Typography gutterBottom ml={1} variant={variant} component={'p'} fontWeight={400}>{' '}{item.price}</Typography>
+        <Typography color={'text.secondary'} variant={variant} component={'p'}>{item.title.toUpperCase()}</Typography>
+        <Typography color={'text.secondary'} ml={1} variant={variant} component={'p'}>{' '}{item.price}</Typography>
       </Box>
 
       {item?.desc && (
         <Box marginBottom={1}>
-          <Typography color={'text.secondary'} pl={1} variant={'body2'} fontWeight={400}>
+          <Typography variant={'body2'}>
             {item?.desc}
           </Typography>
         </Box>
@@ -79,13 +78,19 @@ const Service = ({item}) => {
   )
 }
 
-const Group = ({name, items}) => {
+const Group = ({name, items, divider=false}) => {
   return (
-    <Box marginBottom={2} sx={{paddingX: {xs: 0, sm: 2, md: 2, lg: 0}}}>
+    <Box marginBottom={2} sx={{paddingX: {xs: 0, sm: 1, md: 4, lg: 6}}}>
       <Header name={name} />
       {items.map((item, i) => (
         <Service key={i} item={item} />
       ))}
+      {divider && (
+        <Box paddingTop={1}>
+          <Divider/>
+        </Box>
+      )}
+
     </Box>
   )
 }
@@ -109,14 +114,14 @@ const Content = () => {
     <Container>
       <Box display={'flex'} gap={2} sx={{flexWrap:{xs: 'wrap', sm: 'wrap', md: 'nowrap'}}}>
         <Box>
-          <Group name={'Electrolysis'} items={electro} />
-          <Box marginY={2}> <Divider/> </Box>
+          <Group divider name={'Electrolysis'} items={electro} />
 
-          <Group name={'Information'} items={others}/>
-          <Box marginY={2}> <Divider/> </Box>
+          <Group divider name={'Information'} items={others}/>
 
           <Group name={'Waxing & Tinting'} items={waxing} />
-          <Box marginY={2} sx={{display: {sm: 'block', md: 'none'}}}><Divider/></Box>
+
+          <Box paddingTop={1} sx={{display: {sm: 'block', md: 'none'}}}><Divider/></Box>
+
         </Box>
 
         <Box>
