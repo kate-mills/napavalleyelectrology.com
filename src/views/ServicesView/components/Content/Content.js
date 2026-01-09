@@ -6,17 +6,13 @@ import Divider from '@mui/material/Divider'
 import Container from 'components/Container'
 
 const others = [
-  {
-    title: 'Consultation',
-    price: '$30',
-    desc: 'In this 15-minute virtual or in-office meeting, we discuss your desired treatment area, explain the process, and answer all of your questions.'
-  }
+  { title: 'Consultation', price: '$30', desc: 'In this 15-minute virtual or in-office meeting, we discuss your desired treatment area, explain the process, and answer all of your questions.' }
 ]
 
 const electro = [
   {
     title: 'Electrolysis',
-    price: '$75 - $210',
+    price: '$75-$210',
     desc: 'Permanently remove unwanted hair of any color from your face, underarms, toes, or any other area! Each person is different, but commitment to the process is key to achieving 100% hair-free results. Each session is priced based on the appointment length. Fifteen minutes of electrolysis is $75. One full hour of electrolysis is $210. You will likely need a series of sessions to reach your goal.'
   },
 
@@ -44,7 +40,7 @@ const facials = [
   },
   {
     title: 'Peels',
-    price: '$100 - $500',
+    price: '$100-$500',
     desc: 'Target fine lines, uneven pigmentation, age spots, and mild acne scarring with glycolic, salicylic, and lactic acids. These peels provide deep exfoliation and skin correction with minimal downtime.'
   }
 ]
@@ -57,26 +53,24 @@ const waxing = [
 ]
 
 const Service = ({item}) => {
-  let styles  =  {
-    padding: 1,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-start'
-  }
-
-  let variant = item?.desc ? 'body1': 'body2'
+  let variant = item?.desc ? 'h6': 'body2'
 
   return (
-    <Box paddingTop={item?.desc ? 1: 0}>
-      <Box sx={{...styles}} color={'text.light'}>
-        <Typography fontWeight={550} variant={variant}>{item.title.toUpperCase()}</Typography>
-        <Typography ml={1} fontWeight={550} variant={variant}>{item.price}</Typography>
+    <Box>
+      <Box sx={{
+        padding: 1,
+        paddingBottom: 0,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        flexWrap: {xs: 'wrap', sm: 'wrap', md: 'nowrap'}}}>
+        <Typography gutterBottom variant={variant} component={'p'} fontWeight={400}>{item.title}</Typography>
+        <Typography gutterBottom ml={1} variant={variant} component={'p'} fontWeight={400}>{' '}{item.price}</Typography>
       </Box>
 
       {item?.desc && (
-        <Box>
-          <Divider />
-          <Typography color={'text.secondary'} px={1}>
+        <Box marginBottom={1}>
+          <Typography color={'text.secondary'} pl={1} variant={'body2'} fontWeight={400}>
             {item?.desc}
           </Typography>
         </Box>
@@ -87,7 +81,7 @@ const Service = ({item}) => {
 
 const Group = ({name, items}) => {
   return (
-    <Box marginBottom={4} sx={{paddingX: {sm: 2, md: 0}}}>
+    <Box marginBottom={2} sx={{paddingX: {xs: 0, sm: 2, md: 2, lg: 0}}}>
       <Header name={name} />
       {items.map((item, i) => (
         <Service key={i} item={item} />
@@ -99,7 +93,13 @@ const Group = ({name, items}) => {
 const Header = ({name}) => {
   return (
     <Box display={'flex'} justifyContent={'flex-start'}>
-      <Typography variant={'h4'}>{name}</Typography>
+      <Typography
+        variant={'h4'}
+        color="text.primary"
+        gutterBottom
+        sx={{fontWeight: 700}}
+      >{name}
+      </Typography>
     </Box>
   )
 }
@@ -107,17 +107,21 @@ const Header = ({name}) => {
 const Content = () => {
   return (
     <Container>
-      <Box marginBottom={6}>
-        <Group name={''} items={others}  bgcolor={'primary.50'}/>
-      </Box>
-
-      <Box display={'flex'} gap={'5%'} sx={{flexWrap: {xs: 'wrap', sm: 'wrap', md: 'nowrap'}}}>
+      <Box display={'flex'} gap={2} sx={{flexWrap:{xs: 'wrap', sm: 'wrap', md: 'nowrap'}}}>
         <Box>
-          <Group name={'Remove Hair Permanently'} items={electro} />
+          <Group name={'Electrolysis'} items={electro} />
+          <Box marginY={2}> <Divider/> </Box>
+
+          <Group name={'Information'} items={others}/>
+          <Box marginY={2}> <Divider/> </Box>
+
           <Group name={'Waxing & Tinting'} items={waxing} />
+          <Box marginY={2} sx={{display: {sm: 'block', md: 'none'}}}><Divider/></Box>
         </Box>
 
-        <Group name={'Clinical Skin Care'} items={facials} />
+        <Box>
+          <Group name={'Clinical Skin Care'} items={facials} />
+        </Box>
       </Box>
     </Container>
   )

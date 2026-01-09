@@ -4,7 +4,6 @@ import Divider from '@mui/material/Divider'
 import Main from 'layouts/Main'
 import Container from 'components/Container'
 import Cancellation from 'components/Cancellation'
-import Services from 'components/Services'
 import {Contact, Gallery, Hero} from './components'
 
 const IndexView = () => (
@@ -15,8 +14,6 @@ const IndexView = () => (
     </Container>
     <Divider />
     <Cancellation />
-    <Divider />
-    <Services/>
     <Divider />
     <Container>
       <Gallery />
