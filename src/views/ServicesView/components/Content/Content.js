@@ -16,8 +16,9 @@ const electro = [
     desc: 'Permanently remove unwanted hair of any color from your face, underarms, toes, or any other area! Each person is different, but commitment to the process is key to achieving 100% hair-free results. Each session is priced based on the appointment length. You will likely need a series of sessions to reach your goal.'
   },
 
-  {title: '15 minute session', price: '$75'},
-  {title: '30 minute session', price: '$150'},
+  {title: '15 min session', price: '$75'},
+  {title: '30 min session', price: '$110'},
+  {title: '45 min session', price: '$160'},
   {title: '1 hour session', price: '$210'},
 ]
 
@@ -115,15 +116,10 @@ const Content = () => {
       <Box display={'flex'} gap={2} sx={{flexWrap:{xs: 'wrap', sm: 'wrap', md: 'nowrap'}}}>
         <Box>
           <Group divider name={'Electrolysis'} items={electro} />
-
           <Group divider name={'Information'} items={others}/>
-
           <Group name={'Waxing & Tinting'} items={waxing} />
-
           <Box paddingTop={1} sx={{display: {sm: 'block', md: 'none'}}}><Divider/></Box>
-
         </Box>
-
         <Box>
           <Group name={'Clinical Skin Care'} items={facials} />
         </Box>
