@@ -26,13 +26,13 @@ export default React.memo(({description, title, image}) => {
         addressLocality: 'Napa',
         addressRegion: 'CA',
         name: 'Napa Valley Electrology & Skin Care',
-        postalCode: '94559',
-        streetAddress: '1812 Jefferson St'
+        postalCode: '94558',
+        streetAddress: '300 Central Ave'
       },
       geo: {
         '@type': 'GeoCoordinates',
-        latitude: '38.304154657145645',
-        longitude: '-122.29415223206453'
+        latitude: '38.31426457365393',
+        longitude: '-122.2854900848976'
       }
     }
   ]

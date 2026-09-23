@@ -38,7 +38,7 @@ const Contact = () => {
             </Typography>
           </Box>
           <Box>
-            <Typography component={'h4'} variant="h6" color={'text.secondary'}>Napa Valley Electrology + Skin Care is in Paradigm Medical Aesthetics.
+            <Typography component={'h4'} variant="h6" color={'text.secondary'}>Napa Valley Electrology + Skin Care is in a NEW location.
             </Typography>
           </Box>
         </Box>
@@ -80,9 +80,9 @@ const Contact = () => {
               Address:
             </Typography>
             <Typography  component={'p'} variant={'subtitle1'}>
-              1920 Lernhart St, Suite A</Typography>
+              700 Central Avenue, Suite A</Typography>
             <Typography  component={'p'} variant={'subtitle1'}>
-            Napa, CA 94559</Typography>
+            Napa, CA 94558</Typography>
           </Grid>
         </Grid>
       </Box>

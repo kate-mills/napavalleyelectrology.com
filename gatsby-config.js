@@ -39,10 +39,10 @@ module.exports = {
     defaultImage: `https://napavalleyelectrology.com/product.jpg`,
     organization: {
       address: {
-        street: `1812 Jefferson St`,
+        street: `300 Central Ave, Ste A`,
         city: `Napa`,
         state: `CA`,
-        zip: `94559`,
+        zip: `94558`,
         country: `US`
       },
       email: `hilary@napavalleyelectrology.com`,
