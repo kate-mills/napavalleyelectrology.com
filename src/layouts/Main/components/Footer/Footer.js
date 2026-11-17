@@ -28,6 +28,12 @@ const Footer = () => {
                 FAQs
               </Button>
             </Box>
+            <Box marginTop={1} marginLeft={1}>
+              <Button variant="contained" color="primary" component={Link} to="/services" size="small">
+                SERVICES
+              </Button>
+            </Box>
+
           </Box>
         </Box>
       </Grid>

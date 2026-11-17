@@ -21,7 +21,7 @@ const Gallery = () => {
   const photos = [
     { src: HilaryImg, rows: 1, cols: 1, position: 'center 40%', alt: "Hilary Molloy, Napa Electrologist and Esthetician, is holding her new Electrology license." },
     { src: Apilus, rows: 1, cols: 1, position: 'center 35%', alt: "Apilus Pro Electrology Marketing Card, the standard in 100% permanent hair removal." },
-    { src: TreatmentRoom, rows: 2, cols: 1, position: '20% bottom', alt: "Hilary Molloy's treatment room in Napa California" },
+    { src: TreatmentRoom, rows: 2, cols: 1, position: '72% bottom', alt: "Hilary Molloy's treatment room in Napa California" },
     { src: License, rows: 1, cols: 2, position: '50% 70%', alt: "Hilary Molloy Electrologist License" },
   ];
 
