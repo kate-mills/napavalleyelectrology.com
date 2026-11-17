@@ -204,7 +204,7 @@ const Content = () => {
               subtitle: '',
               isBulletList: true,
               //list: ['15 minutes - $75', '30 minutes - $110', '45 minutes - $160', '60 minutes - $210']
-              bulletList: [ { bold: '15 minutes - ', text: '$75' }, { bold: '30 minutes - ', text: '$110' }, { bold: '45 minutes - ', text: '$160' }, { bold: '60 minutes - ', text: '$210' }, ]
+              bulletList: [ { bold: '15 minutes - ', text: '$80' }, { bold: '30 minutes - ', text: '$115' }, { bold: '45 minutes - ', text: '$165' }, { bold: '60 minutes - ', text: '$215' }, ]
             },
 
             {
@@ -213,11 +213,11 @@ const Content = () => {
               isBulletList: true,
               bulletList: [
                 {
-                  bold: 'Signature Facial - $210',
+                  bold: 'Signature Facial - $215',
                   text: 'Includes double cleanse, dermaplaning, followed by enzymatic or chemical exfoliation, customized masks, steam, extractions, and massage. Transformational results infused with intention and relaxation.'
                 },
                 {
-                  bold: 'Acne Facial - $165',
+                  bold: 'Acne Facial - $175',
                   text: 'Double cleanse, exfoliation, steam mask, and extractions.'
                 },
               ]
