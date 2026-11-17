@@ -32,11 +32,11 @@ module.exports = {
     dateModified: `${new Date().toISOString()}`,
     author: `Hilary Molloy`,
     twitterUsername: `@itsHilaryMolloy`,
-    image: `/product.jpg`,
+    image: `/treatment-room.jpg`,
     url: `https://napavalleyelectrology.com`,
     baseUrl: `https://napavalleyelectrology.com`,
     siteUrl: `https://napavalleyelectrology.com`,
-    defaultImage: `https://napavalleyelectrology.com/product.jpg`,
+    defaultImage: `https://napavalleyelectrology.com/treatment-room.jpg`,
     organization: {
       address: {
         street: `300 Central Ave, Ste A`,
